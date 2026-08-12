@@ -1,4 +1,4 @@
-**Feature requirements - Team Page and Login Restyling**
+# Feature requirements - Team Page and Login Restyling
 
 | **Requirement**        | **Validation/display rule**                                                                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -12,7 +12,7 @@
 | Accessibility          | Text must be readable, images require appropriate alt text, and page structure should use suitable semantic headings/content structure.          |
 | Navigation after login | An authenticated user must be able to reach the team page through the intended project navigation/flow.                                          |
 
-**Field rules**
+## Field rules
 
 **Team name**
 
@@ -42,7 +42,7 @@
 - Text must wrap naturally
 - Content must not overlap other elements or escape its container
 
-**Scope**
+## Scope
 
 The login work is presentation/styling only. Existing authentication logic and session behaviour are outside the scope of this feature and must remain functionally unchanged.
 
@@ -70,7 +70,7 @@ The login work is presentation/styling only. Existing authentication logic and s
 - Google sign-in behaviour;
 - sign-up/authentication business rules.
 
-**Edge Cases**
+## Edge Cases
 
 | **Edge case**                           | **Required treatment**                                                                                                |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
