@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { LayoutDashboard, StickyNote, User, Settings } from 'lucide-react'
 
 const navItems = [
+  { href: '/team', label: 'Team', icon: User },
   { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/notes', label: 'Notes', icon: StickyNote },
   { href: '/profile', label: 'Profile', icon: User },
