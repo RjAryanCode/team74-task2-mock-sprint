@@ -65,7 +65,7 @@ export default function SignInPage() {
     <div className="space-y-6">
       <div className="space-y-1 text-center">
         <h1 className="text-2xl font-bold tracking-tight">Sign in</h1>
-        <p className="text-sm text-zinc-500">Enter your credentials to continue</p>
+        <p className="text-sm text-zinc-500">Enter your details to continue</p>
       </div>
 
       <button
@@ -105,9 +105,11 @@ export default function SignInPage() {
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div className="space-y-1.5">
+          <div className="flex items-center justify-between">
           <label htmlFor="email" className="text-sm font-medium">
             Email
           </label>
+          </div>
           <input
             id="email"
             type="email"
@@ -115,7 +117,7 @@ export default function SignInPage() {
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? 'email-error' : undefined}
             className="w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm placeholder:text-zinc-400 focus:ring-2 focus:ring-zinc-500 focus:outline-none aria-invalid:border-red-500 dark:border-zinc-700 dark:bg-zinc-900"
-            placeholder="you@example.com"
+            placeholder="example@editorAcademy.com"
             {...register('email')}
           />
           {errors.email && (
@@ -138,7 +140,7 @@ export default function SignInPage() {
             aria-invalid={!!errors.password}
             aria-describedby={errors.password ? 'password-error' : undefined}
             className="w-full rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm placeholder:text-zinc-400 focus:ring-2 focus:ring-zinc-500 focus:outline-none aria-invalid:border-red-500 dark:border-zinc-700 dark:bg-zinc-900"
-            placeholder="••••••••"
+            placeholder="......"
             {...register('password')}
           />
           {errors.password && (
@@ -146,18 +148,9 @@ export default function SignInPage() {
               {errors.password.message}
             </p>
           )}
-        </div>
+        </div><br></br>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full rounded-md bg-black px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-black dark:hover:bg-zinc-200"
-        >
-          {isSubmitting ? 'Signing in…' : 'Sign in'}
-        </button>
-      </form>
-
-      <p className="text-center text-sm text-zinc-500">
+        <p className="text-center text-sm text-zinc-500">
         Don&apos;t have an account?{' '}
         <Link
           href="/auth/signup"
@@ -166,6 +159,16 @@ export default function SignInPage() {
           Create one
         </Link>
       </p>
+
+        <button 
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full rounded-md bg-black px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-black dark:hover:bg-zinc-200 ShrinkableButton"
+        >
+          {isSubmitting ? 'Signing in…' : 'Log In'}
+        </button>
+      </form>
+
     </div>
   )
 }
